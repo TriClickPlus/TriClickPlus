@@ -1,0 +1,280 @@
+<!doctype html>
+<!-- TriClick (c) 2026 TriClick. MIT License, see LICENSE. Contact: chromedeveloper1@gmail.com. Build ID: 98c76752-c731-4cf8-b7a4-b81f0646db2e. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="triclick-build" content="98c76752-c731-4cf8-b7a4-b81f0646db2e">
+  <title>TriClick+: Auto Clicker, Auto Scroller, OCR + Bonus Features</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="theme-init.js"></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="gearic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></g></symbol>
+    <symbol id="txtic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M12 5v14M9 19h6"/></g></symbol>
+    <symbol id="scanic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8V6.5a3 3 0 0 1 3-3H8M16 3.5h1.5a3 3 0 0 1 3 3V8M20.5 16v1.5a3 3 0 0 1-3 3H16M8 20.5H6.5a3 3 0 0 1-3-3V16"/><path d="M8 8.5h8M12 8.5v7.5M10 16h4"/></g></symbol>
+    <symbol id="findtxt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11M4 9h7M4 13h9"/><circle cx="16" cy="16" r="4"/><path d="M19 19l2 2"/></g></symbol>
+    <symbol id="dropic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(5 .2) scale(.72)" stroke-width="2.7"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l.4.4a2.1 2.1 0 1 1-3 3l-3.8-3.8a2.1 2.1 0 1 1 3-3z"/></g><g transform="translate(6.4 20.4) scale(.9) translate(-5 -19)"><path d="M5 17.2s2.2 2.2 2.2 3.6a2.2 2.2 0 0 1-4.4 0c0-1.4 2.2-3.6 2.2-3.6z"/></g></g></symbol>
+    <symbol id="kbic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5.5" width="20" height="13" rx="2.5"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14.5h10"/></g></symbol>
+    <symbol id="cur" viewBox="0 0 24 24"><path d="M5 3v16l4.3-4.2 3 6.4 2.4-1.1-3-6.3 6.1-.5z" fill="currentColor"/></symbol>
+    <symbol id="up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="dn" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="entic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5v7a3 3 0 0 1-3 3H5"/><path d="M9 11l-4 4 4 4"/></g></symbol>
+    <symbol id="imgic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="M4 18l5-5 4 4 3-3 4 4"/></g></symbol>
+    <symbol id="wav" viewBox="0 0 24 24"><path d="M3 15c2.5 0 2.5-8 5-8s2.5 10 5 10 2.5-8 5-8c1.2 0 1.7.6 3 2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ms" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="6" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 7v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="f-en" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></symbol>
+    <symbol id="f-ar" viewBox="0 5 36 26" preserveAspectRatio="xMidYMid slice"><path fill="#006C35" d="M32 5H4a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z"></path><g fill="#FFF"><path d="M8.919 14.05c.632.06.283-1.069.512-1.274c.043-.101.123-.102.129.026v.958c-.006.312.199.403.358.468c.166-.013.276-.007.341.154l.078 1.658s.384.11.402-.933c.019-.612-.122-1.124-.039-1.243c.003-.117.152-.124.256-.067c.165.116.239.26.495.203c.391-.107.625-.297.631-.597c-.023-.285-.055-.57-.178-.855c.017-.052-.075-.186-.058-.238c.07.11.177.101.201 0c-.066-.219-.169-.429-.337-.52c-.138-.122-.34-.097-.414.157c-.034.292.106.64.318.923c.045.111.109.295.081.461c-.113.064-.227.038-.321-.062c0 0-.311-.233-.311-.285c.083-.528.019-.588-.027-.734c-.032-.202-.128-.267-.206-.405c-.078-.082-.183-.082-.233 0c-.138.238-.074.75.026.979c.071.21.181.343.129.343c-.043.119-.131.091-.195-.046c-.092-.284-.11-.707-.11-.898c-.028-.236-.058-.741-.213-.869c-.095-.129-.236-.067-.285.052c-.01.234-.012.469.015.686c.106.379.14.713.192 1.102c.014.521-.301.226-.287-.032c.073-.335.054-.863-.011-.997c-.051-.133-.112-.167-.236-.145c-.098-.008-.352.27-.424.73c0 0-.061.237-.087.448c-.035.238-.191.406-.301-.033c-.095-.319-.153-1.106-.312-.922c-.046.615-.101 1.697.421 1.807z"></path><path d="M9.87 14.499c-.52.01-1.281.683-1.302 1.056c.548-.264 1.087-.518 1.645-.79c-.09-.135-.005-.256-.343-.266z"></path><path d="M12.737 16.516c.241-.803-.039-1.395.092-1.392c.277.299.665.04.75-.064c.037-.052.128-.086.192-.018c.217.156.599.082.678-.192a6.03 6.03 0 0 0 .092-.833c-.177.055-.309.092-.321.165l-.037.238c-.015.077-.168.08-.174-.018c-.067-.305-.345-.345-.513.128c-.113.092-.317.11-.339-.027c.027-.317-.101-.36-.357-.211c-.082-.629-.165-1.23-.247-1.859c.107-.003.205.076.302-.046c-.107-.333-.333-1.013-.458-1.062c-.061-.074-.113-.028-.192-.009c-.134.043-.259.159-.22.384c.159.965.263 1.7.421 2.665c.024.113-.07.262-.192.247c-.207-.14-.259-.424-.613-.412c-.257.003-.55.281-.586.55c-.043.213-.058.445 0 .632c.18.216.397.195.586.146c.155-.064.284-.22.338-.183c.037.045.009.558-.732.952c-.449.201-.806.247-.998-.119c-.119-.229.009-1.099-.284-.897c-.867 2.235 2.03 2.545 2.354.092c.031-.101.153-.202.174-.037c-.067 2.222-2.241 2.375-2.61 1.676c-.092-.165-.119-.531-.128-.751c-.055-.437-.284-.269-.32.164c-.037.241-.027.309-.027.54c.115 1.755 2.915 1.001 3.369-.449zm-1.08-1.518c-.018.034-.097.02-.155.02c-.066-.003-.097-.014-.137-.067c-.018-.06.038-.117.063-.162c.031-.053.198-.108.257.04a.168.168 0 0 1-.028.169z"></path><path d="M13.602 13.009c.174-.064.999-1.007.999-1.007c-.043-.037-.081-.064-.124-.101c-.046-.04-.041-.08 0-.119c.204-.119.139-.38.032-.499a.495.495 0 0 0-.444.004c-.143.137-.177.357-.064.495c.11.052.22.163.147.224c-.337.36-1.261.981-1.154 1.003c.023.03.59.029.608 0zm.611-1.481c.053-.013.121.034.153.104c.032.07.015.137-.037.15h-.002c-.052.013-.12-.034-.152-.104c-.031-.071-.014-.137.038-.15zm-5.351 5.73c-.136.277-.193.087-.205-.068a3.553 3.553 0 0 1 .039-.779c.034-.22 0-.153-.07-.064c-.309.492-.336 1.228-.165 1.447c.09.104.239.15.35.116c.194-.084.279-.478.233-.621c-.066-.101-.117-.117-.182-.031zm10.181-5.208c.356.478.694.965 1.025 1.461c.065.43.112.85.14 1.267c.055.804.071 1.674.021 2.521c.15.006.393-.244.477-.609c.055-.505-.02-1.404-.025-1.702a22.071 22.071 0 0 0-.027-.56c.394.644.778 1.318 1.153 2.067c.137-.064.107-.83.027-.938c-.3-.643-.713-1.279-.845-1.523c-.049-.09-.216-.346-.415-.639a7.506 7.506 0 0 0-.084-.698c-.062-.428.177.047.144-.202c-.077-.428-.315-.717-.593-1.109c-.09-.127-.087-.153-.226.031a.772.772 0 0 0-.066.351a2.458 2.458 0 0 0-.139-.185a51.319 51.319 0 0 0-.455-.388c-.101-.072-.347-.202-.391.014a1.25 1.25 0 0 0 .022.454c.026.107.181.285.257.387zm.74-.024c.019.083.039.166.052.251l.015.081a3.628 3.628 0 0 0-.131-.172c-.164-.194-.028-.152.064-.16z"></path><path d="M21.919 16.693c-.348.363-.85.81-1.396 1.017c-.059.066.146.349.41.349c.443-.052.833-.301 1.194-.956c.097-.152.267-.479.271-.733c.033-1.486-.074-2.643-.297-3.717a.6.6 0 0 1 .012-.259c.028-.034.126 0 .178-.084c.075-.078-.201-.718-.359-.964c-.056-.11-.075-.184-.168.013c-.098.16-.163.439-.155.699c.211 1.463.276 2.744.414 4.207c.011.141-.01.347-.104.428zm5.83-3.71c-.015-.104-.061-.346-.043-.377c.028-.074.173.008.225-.077c.076-.077-.374-.655-.531-.901c-.057-.11-.076-.184-.169.013c-.098.16-.132.447-.093.699c.235 1.589.41 2.783.446 4.192c-.021.134-.025.206-.088.374c-.139.178-.292.4-.437.508c-.144.107-.451.21-.552.289c-.317.185-.318.396-.06.403c.442-.052.966-.088 1.327-.634c.097-.152.212-.565.217-.819c.033-1.486-.019-2.596-.242-3.67zm-3.351 1.237c.004-.204.023-.474.034-.643c.005-.063.02-.134.08-.15c.061-.016.169.062.17-.004c-.012-.129-.038-.321-.111-.412c-.1-.148-.365-.112-.412.12c.001.086.04.132.033.21c-.012.044-.058.074-.167.022c.018-.016-.071-.139-.071-.139c-.085-.052-.199.003-.272.05a.415.415 0 0 0-.024.33c.12.227.539.612.74.616z"></path><path d="M24.257 12.481c.293.359.592.723.893 1.093c.065.826.082 1.502.146 2.328c-.009.35-.117.655-.22.699c0 0-.155.09-.259-.009c-.076-.031-.379-.505-.379-.505c-.155-.142-.257-.102-.367 0c-.304.293-.441.843-.647 1.221c-.054.085-.204.157-.371-.006c-.423-.579-.175-1.402-.227-1.19c-.377.425-.211 1.128-.126 1.28c.124.248.225.408.467.531c.22.162.392.06.486-.053c.222-.231.225-.816.329-.934c.072-.213.257-.177.346-.082a.876.876 0 0 0 .315.273c.207.183.454.216.697.049c.166-.093.275-.214.372-.453c.108-.288.049-1.612.027-2.406c.155.2.306.409.459.618c.067.663.105 1.323.083 1.997c-.016.135.47-.4.466-.654c-.002-.205 0-.391 0-.566c.234.352.462.715.676 1.099c.134-.07.09-.825.005-.929c-.247-.414-.576-.845-.803-1.153c-.015-.039-.023-.083-.041-.12c-.091-.211-.034-.381-.077-.605c-.042-.225-.031-.561-.096-.828c-.018-.104-.072-.438-.056-.469c.026-.075.126.002.175-.084c.073-.08-.253-.925-.419-1.167c-.06-.108-.168-.071-.302.105c-.123.116-.077.38-.03.631c.117.608.215 1.191.299 1.768a57.866 57.866 0 0 0-.545-.713l-.008-.044c0-.011-.027-.524-.051-.646c-.004-.049-.016-.064.036-.058c.055.046.062.049.097.065c.056.01.105-.085.072-.172l-.517-.952c-.041-.041-.095-.085-.16.011a.374.374 0 0 0-.128.283c.016.225.055.455.07.681l.022.122c-.023-.027-.051-.061-.063-.073c-.439-.462.202-.075-.084-.432c-.242-.266-.312-.349-.52-.509c-.104-.067-.167-.195-.201.023a4.553 4.553 0 0 0-.015.575c0 .092.093.26.174.36zm-8.901 1.079c.252.104.413-.376.517-.902c.07-.148.124-.164.16-.088c-.009.7.05.855.23 1.068c.401.31.733.039.76.013l.312-.312c.069-.073.162-.078.26-.013c.096.086.083.236.287.34c.172.069.54.016.625-.132c.115-.196.143-.264.195-.338c.082-.109.222-.06.222-.026c-.013.061-.095.122-.039.231c.098.073.12.026.178.01c.204-.098.356-.54.356-.54c.009-.165-.083-.151-.143-.117c-.078.047-.083.063-.161.111c-.1.015-.293.081-.388-.067c-.098-.178-.1-.426-.174-.605c0-.013-.13-.283-.009-.3c.061.011.19.045.211-.063c.063-.106-.137-.408-.273-.561c-.119-.13-.284-.146-.443-.013c-.112.103-.096.217-.118.326a.508.508 0 0 0 .105.443c.111.219.314.502.247.898c0 0-.118.188-.325.164c-.086-.019-.226-.056-.3-.606c-.056-.417.014-1-.163-1.273c-.064-.165-.11-.324-.266-.042c-.042.111-.222.279-.091.626c.107.219.15.576.102.974c-.074.113-.09.151-.187.264c-.136.146-.283.109-.396.054c-.106-.071-.188-.108-.236-.334c.009-.36.029-.95-.037-1.075c-.097-.194-.257-.124-.326-.065c-.329.301-.491.808-.59 1.211c-.091.294-.188.21-.256.091c-.166-.156-.177-1.373-.378-1.172c-.323.914.182 1.918.532 1.82z"></path><path d="M20.137 15.524l-.096-.055l-1.881-.009c-.097-.037-.068-.069 0-.095c.449-.061 1.248-.191 1.301-.958c-.009-.399-.172-.661-.662-.733c-.359.028-.616.377-.575.76c-.017.104.034.306-.071.329c-.691.063-1.444.495-1.469.805c-.042.029-.136-.055-.124-.187a3.694 3.694 0 0 0-.475-1.606c-.218-.218-.15-.146-.296-.043c-.094.108-.111.182-.106.397c0 .008.176.499.325.843c.099.353.192.756.125 1.137c-.232.504-.699.956-1.149 1.201c-.232.075-.431.048-.48-.004c-.143-.096-.136-.273-.125-.276c.379-.265.813-.478 1.153-1.191c.1-.272.13-.437.031-.858a.814.814 0 0 0-.197-.398c.061-.04.236.093.263.014a1.253 1.253 0 0 0-.331-.61c-.135-.123-.282-.137-.406-.024c-.14.078-.17.356-.103.6c.074.184.275.215.419.584c0 .008.052.276-.022.381c-.059.184-.824.785-.866.812c-.021.026-.012-.013-.015-.113c-.005-.122.049-.41.034-.412c-.249.161-.332.654-.377.8c-.63.435-1.343.759-1.755 1.201c-.215.335 1.478-.385 1.675-.472c.044.032.039.183.157.318c.176.238.548.385.913.294c.61-.221.963-.637 1.321-1.098c.051-.075.131-.132.205-.075c.246.551.957.941 1.874.982c.213-.259.11-.384.024-.438c0-.008-.453-.18-.522-.352c-.042-.156.06-.293.264-.397c.589-.071 1.168-.15 1.729-.33c.006-.188.115-.47.19-.592c.072-.124.111-.087.1-.132zm-1.547-1.172c.028-.047.121-.045.208.006c.087.05.136.13.107.177c-.028.048-.122.045-.209-.006c-.087-.05-.134-.129-.106-.177zm-.757 1.9c-.202.069-.396.123-.396.415c.075.406-.103.267-.208.211c-.124-.089-.473-.304-.523-.768c-.008-.111.079-.204.218-.204c.209.057.518.061.786.089c.219.014.328.186.123.257zm-6.967-4.505c.216.104.624.06.606-.29c0-.031-.008-.135-.011-.163c-.044-.103-.164-.078-.192.029c-.009.035.015.091-.016.109c-.018.018-.087.007-.084-.089c0-.031-.023-.064-.036-.083c-.014-.009-.022-.012-.047-.012c-.03.001-.03.009-.046.035c-.007.025-.017.051-.017.08c-.004.034-.017.046-.042.052c-.028 0-.022.003-.044-.012c-.014-.015-.031-.021-.031-.046a.276.276 0 0 0-.014-.086c-.012-.016-.031-.023-.053-.029c-.118 0-.126.135-.119.187c-.011.009-.015.251.146.318z"></path><path d="M17.512 14.027c0-.031-.023-.063-.036-.083c-.014-.009-.022-.012-.047-.012c-.03.001-.029.009-.046.035c-.007.026-.017.051-.017.08c-.003.035-.017.047-.042.052c-.028 0-.022.003-.045-.011c-.014-.015-.031-.021-.031-.046a.271.271 0 0 0-.014-.086c-.012-.016-.031-.023-.053-.028c-.118 0-.126.135-.12.186c-.009.01-.014.251.147.319c.217.103.732.043.606-.29a2.88 2.88 0 0 0-.011-.164c-.044-.103-.165-.077-.192.029c-.008.035.016.091-.016.109c-.016.018-.086.007-.083-.09zm3.397-.707c.216.104.623.06.605-.289a2.88 2.88 0 0 0-.011-.164c-.044-.103-.164-.077-.191.029c-.009.035.015.091-.017.109c-.018.018-.087.008-.084-.089c0-.031-.023-.064-.036-.083c-.014-.009-.022-.012-.048-.012c-.03.002-.029.009-.046.035c-.007.026-.017.051-.017.08c-.004.035-.017.047-.042.052c-.028 0-.022.003-.045-.011c-.014-.015-.03-.021-.03-.046a.283.283 0 0 0-.014-.087c-.013-.016-.031-.023-.054-.028c-.118 0-.126.135-.119.186c-.007.01-.012.251.149.318zm.146-1.352c.077.216-.059.422.022.452c.073.034.177-.223.215-.46c.045-.192-.092-.585-.286-.666c-.118-.028-.286.042-.232.2c-.027.076.238.334.281.474zm1.995 5.064c.151.001.325-.345.399-.688c.041-.472-.028-.759-.04-1.037c-.013-.277-.313-2.392-.375-2.602c-.073-.397.293-.053.253-.284c-.127-.291-.442-.714-.542-.967c-.06-.108-.034-.204-.168-.028c-.123.405-.166.735-.119.987c.318 1.66.644 3.04.592 4.619zm3.756-4.34c.035.108-.053.457.02.489c.067.036.161-.241.196-.498c.019-.141-.084-.633-.261-.721c-.108-.03-.261.045-.211.217c-.025.083.217.361.256.513zm-13.119 3.656c.065.027.154-.177.188-.366c.019-.104-.081-.465-.25-.53c-.104-.022-.246.006-.202.16c-.005.083.23.183.244.376c.034.08-.05.337.02.36zm-4.556-4.615c.033.083-.033.348.036.373c.063.028.152-.184.185-.379c.019-.108.004-.474-.246-.549c-.103-.023-.246.034-.199.165c-.024.062.187.274.224.39zm4.902 1.173c-.191.104-.266.412-.146.591c.111.159.287.1.311.1c.188.023.299-.352.299-.352s.006-.105-.217.094c-.094.018-.106-.017-.129-.071a.456.456 0 0 1 .029-.292c.032-.093-.04-.134-.147-.07zm1.442-1.153a.257.257 0 0 0 .118-.174c.029-.146-.155.069-.178-.094c-.041-.151.077-.213.189-.359c.004-.101.002-.172-.135-.09c-.096.065-.288.263-.294.491c-.006.129-.03.128.055.21c.061.089.122.08.245.016zm1.299.078c.124-.336.124-.478.133-.621c-.038-.217-.185-.21-.282.031c-.042.091-.091.57-.083.57c-.033.143.149.204.232.02zm8.17 2.383s-1.003.713-1.027.738c-.1.088-.05.4 0 .364c.071.028 1.08-.657 1.06-.737c.047.002.07-.401-.033-.365zm-.123 1.934c.067.036.244-.183.237-.456c.02-.141-.051-.658-.227-.746c-.108-.03-.252.062-.202.233c-.025.082.124.369.163.521c.035.109-.044.416.029.448zm-5.68 1.496c0 .009.085.082.185.024c.21-.081.342-.159.636-.224c.077-.001.072-.208-.05-.215c-.159.008-.307.016-.466.142c-.098.022-.114-.037-.136-.091c-.024-.133.055-.225.038-.324c.006.006-.091-.083-.19-.033c-.005 0-.221.146-.29.248c-.043.033-.038.061-.025.116c.033.076.092.053.158.017c.088-.012.13.046.123.151c-.042.133.017.182.017.189zm6.551.166c-.033.057-.055.143.047.17c.188.053.621-.229.621-.234c.07-.053.047-.152.041-.152c-.041-.047-.133-.02-.195-.027c-.029 0-.127-.015-.08-.101a.598.598 0 0 0 .078-.151c.029-.065.004-.108-.102-.143c-.107-.02-.15-.01-.269 0c-.064.014-.086.042-.098.12c.005.118.076.112.15.159c.043.055.071.105-.003.194c-.07.065-.119.101-.19.165zM25.5 23H24v-.5a.5.5 0 0 0-1 0v.5H11s0 1 3 1h9v.5a.5.5 0 0 0 1 0V24h1v.5a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-.5-.5z"></path></g></symbol>
+    <symbol id="f-es" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/><rect x="12.6" y="14.5" width="3" height="13" fill="#d9d9d9"/><rect x="28.4" y="14.5" width="3" height="13" fill="#d9d9d9"/><rect x="12" y="13.4" width="4.2" height="1.6" fill="#AA151B"/><rect x="27.8" y="13.4" width="4.2" height="1.6" fill="#AA151B"/><path d="M17.8 14.6l1-2.6 1.6 1.4 1.6-2.2 1.6 2.2 1.6-1.4 1 2.6z" fill="#C8A000" stroke="#7a5c00" stroke-width=".4"/><rect x="17.5" y="15.5" width="4.5" height="5.6" fill="#c8102e"/><rect x="22" y="15.5" width="4.5" height="5.6" fill="#f4f4f4"/><path d="M17.5 21.1H22V28C19.5 27.2 17.5 25.6 17.5 22.6Z" fill="#F1BF00"/><path d="M22 21.1H26.5V22.6C26.5 25.6 24.5 27.2 22 28Z" fill="#c8102e"/><path d="M18.2 22h3M18.2 23.6h3M18.6 25.2h2.6" stroke="#c8102e" stroke-width=".7"/><rect x="18.7" y="17" width="2.2" height="2.4" fill="#F1BF00"/><rect x="23.2" y="16.8" width="2" height="2.8" fill="#7d2a8a"/><ellipse cx="22" cy="21.4" rx="1.4" ry="1.7" fill="#0039F0" stroke="#F1BF00" stroke-width=".5"/><path d="M17.5 15.5h9v7.1C26.5 25.6 24.5 27.2 22 28 19.5 27.2 17.5 25.6 17.5 22.6z" fill="none" stroke="#7a1010" stroke-width=".5"/></symbol>
+    <symbol id="f-pt" viewBox="0 0 60 40"><rect width="60" height="40" fill="#009739"/><polygon points="30,4 56,20 30,36 4,20" fill="#FEDD00"/><circle cx="30" cy="20" r="9" fill="#012169"/><path d="M21.4 17.6q9-2.4 17.6 3.4" stroke="#fff" stroke-width="1.6" fill="none"/></symbol>
+    <symbol id="f-ru" viewBox="0 0 60 40"><rect width="60" height="13.4" fill="#fff"/><rect y="13.3" width="60" height="13.4" fill="#0039A6"/><rect y="26.6" width="60" height="13.4" fill="#D52B1E"/></symbol>
+    <symbol id="f-zh" viewBox="0 0 60 40"><rect width="60" height="40" fill="#DE2910"/><polygon points="10,5 11.8,10.5 17.6,10.5 12.9,13.9 14.7,19.4 10,16 5.3,19.4 7.1,13.9 2.4,10.5 8.2,10.5" fill="#FFDE00"/><polygon points="20,3 20.7,5.3 23.1,5.3 21.2,6.7 21.9,9 20,7.6 18.1,9 18.8,6.7 16.9,5.3 19.3,5.3" fill="#FFDE00"/><polygon points="24,8 24.7,10.3 27.1,10.3 25.2,11.7 25.9,14 24,12.6 22.1,14 22.8,11.7 20.9,10.3 23.3,10.3" fill="#FFDE00"/><polygon points="24,15 24.7,17.3 27.1,17.3 25.2,18.7 25.9,21 24,19.6 22.1,21 22.8,18.7 20.9,17.3 23.3,17.3" fill="#FFDE00"/><polygon points="20,20 20.7,22.3 23.1,22.3 21.2,23.7 21.9,26 20,24.6 18.1,26 18.8,23.7 16.9,22.3 19.3,22.3" fill="#FFDE00"/></symbol>
+    <symbol id="f-ur" viewBox="0 0 60 40"><rect width="60" height="40" fill="#01411C"/><rect width="15" height="40" fill="#fff"/><circle cx="37.5" cy="20" r="10" fill="#fff"/><circle cx="41.5" cy="17.6" r="8.6" fill="#01411C"/><polygon points="46.83,13.34 46.79,16.13 49.40,17.14 46.72,17.95 46.57,20.75 44.97,18.46 42.27,19.18 43.95,16.95 42.43,14.60 45.07,15.51" fill="#fff"/></symbol>
+    <symbol id="f-in" viewBox="0 0 60 40"><rect width="60" height="13.4" fill="#FF9933"/><rect y="13.3" width="60" height="13.4" fill="#fff"/><rect y="26.6" width="60" height="13.4" fill="#138808"/><circle cx="30" cy="20" r="5.2" fill="none" stroke="#000080" stroke-width="1.3"/><circle cx="30" cy="20" r="1" fill="#000080"/><path d="M30 14.8v10.4M24.8 20h10.4M26.3 16.3l7.4 7.4M33.7 16.3l-7.4 7.4" stroke="#000080" stroke-width=".9"/></symbol>
+  </svg>
+
+  <div id="permask" hidden>
+    <div class="pmbox">
+      <div class="pmt" data-i18n="permTitle">Allow key binds in games</div>
+      <p class="pmb" data-i18n="permBody">Without this, your key binds won't work inside games. Allow it once so TriClick can press your keys in the game.</p>
+      <button id="permallow" type="button" data-i18n="permAllow">Allow</button>
+      <button id="permlater" type="button" data-i18n="permLater">Not now</button>
+    </div>
+  </div>
+
+  <div id="app">
+  <div id="kb" hidden>
+    <div class="kbtop"><h1 class="kblogo"><span class="rl">T</span>ri<span class="rl">C</span>lick<span class="tcp">+</span></h1><span class="kbh" data-i18n="keyboard">Keyboard</span><button id="kbback" type="button" data-i18n-title="back" title="Back" aria-label="Back"><span data-i18n="back">Back</span></button></div>
+    <div class="stepbar kbsteps"><div class="stepper"><button id="kminus" type="button" data-i18n-title="remove" title="Remove click" aria-label="Remove click">&minus;</button><button id="kplus" type="button" data-i18n-title="addClick" title="Add click" aria-label="Add click">+</button></div><div class="actions three kbacts"><button id="krun" type="button">Start</button><button id="krtimes" type="button" data-i18n="resetTimes">Reset Times</button><button id="kreset" type="button" data-i18n="resetPoints">Reset Points</button></div><div class="kblm"><button id="kblangbtn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-title="language" title="Language" aria-label="Language"><span class="lc">EN</span><svg class="flag"><use href="#f-en"/></svg></button>
+      <div id="kblanglist" role="listbox" hidden>
+        <button class="lang" role="option" data-lang="ar" type="button"><svg class="flag"><use href="#f-ar"/></svg><span class="lc">AR</span><span class="ln">العربية</span></button>
+        <button class="lang on" role="option" data-lang="en" type="button"><svg class="flag"><use href="#f-en"/></svg><span class="lc">EN</span><span class="ln">English</span></button>
+        <button class="lang" role="option" data-lang="es" type="button"><svg class="flag"><use href="#f-es"/></svg><span class="lc">ES</span><span class="ln">Español</span></button>
+        <button class="lang" role="option" data-lang="in" type="button"><svg class="flag"><use href="#f-in"/></svg><span class="lc">IN</span><span class="ln">हिन्दी</span></button>
+        <button class="lang" role="option" data-lang="pt" type="button"><svg class="flag"><use href="#f-pt"/></svg><span class="lc">PT</span><span class="ln">Português</span></button>
+        <button class="lang" role="option" data-lang="ru" type="button"><svg class="flag"><use href="#f-ru"/></svg><span class="lc">RU</span><span class="ln">Русский</span></button>
+        <button class="lang" role="option" data-lang="ur" type="button"><svg class="flag"><use href="#f-ur"/></svg><span class="lc">UR</span><span class="ln">اردو</span></button>
+        <button class="lang" role="option" data-lang="zh" type="button"><svg class="flag"><use href="#f-zh"/></svg><span class="lc">ZH</span><span class="ln">中文</span></button>
+      </div></div></div>
+    <div id="kbrows"></div>
+    <div class="kloopr"><label class="loop kloopl"><input type="checkbox" id="kloop"><span data-i18n="repeatSeq">Repeat the sequence</span><span class="reps" id="kreps" hidden></span></label><button id="kbtog" type="button" aria-pressed="false" title="Hide on-screen keyboard" aria-label="Hide on-screen keyboard"><svg class="pl" viewBox="0 0 24 16" width="24" height="16" aria-hidden="true"><rect x="1" y="1.5" width="22" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="5" cy="5.2" r="0.9" fill="currentColor"/><circle cx="8.4" cy="5.2" r="0.9" fill="currentColor"/><circle cx="11.8" cy="5.2" r="0.9" fill="currentColor"/><circle cx="15.2" cy="5.2" r="0.9" fill="currentColor"/><circle cx="18.6" cy="5.2" r="0.9" fill="currentColor"/><circle cx="5" cy="8.0" r="0.9" fill="currentColor"/><circle cx="8.4" cy="8.0" r="0.9" fill="currentColor"/><circle cx="11.8" cy="8.0" r="0.9" fill="currentColor"/><circle cx="15.2" cy="8.0" r="0.9" fill="currentColor"/><circle cx="18.6" cy="8.0" r="0.9" fill="currentColor"/><path d="M7 11.4h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></button><div class="kright"><button id="kreskeys" type="button" data-i18n="resetKeys">Reset Keybinds</button><div class="ktools"><button id="ktxtbtn" type="button" data-i18n-title="ocrTitle" title="Read text from screen" aria-label="Read text from screen" aria-expanded="false"><svg class="i"><use href="#txtic"/></svg></button></div></div></div>
+    <div class="kbd">
+      <div class="kr fk"><button type="button" data-c="Escape" class="w" style="flex:1.4">Esc</button><button type="button" class="w" data-c="F1">F1</button><button type="button" class="w" data-c="F2">F2</button><button type="button" class="w" data-c="F3">F3</button><button type="button" class="w" data-c="F4">F4</button><button type="button" class="w" data-c="F5">F5</button><button type="button" class="w" data-c="F6">F6</button><button type="button" class="w" data-c="F7">F7</button><button type="button" class="w" data-c="F8">F8</button><button type="button" class="w" data-c="F9">F9</button><button type="button" class="w" data-c="F10">F10</button><button type="button" class="w" data-c="F11">F11</button><button type="button" class="w" data-c="F12">F12</button></div>
+      <div class="kr"><button type="button" data-c="Backquote">`</button><button type="button" data-c="Digit1">1</button><button type="button" data-c="Digit2">2</button><button type="button" data-c="Digit3">3</button><button type="button" data-c="Digit4">4</button><button type="button" data-c="Digit5">5</button><button type="button" data-c="Digit6">6</button><button type="button" data-c="Digit7">7</button><button type="button" data-c="Digit8">8</button><button type="button" data-c="Digit9">9</button><button type="button" data-c="Digit0">0</button><button type="button" data-c="Minus">-</button><button type="button" data-c="Equal">=</button><button type="button" data-c="Backspace" class="w" style="flex:2">Back</button></div>
+      <div class="kr"><button type="button" data-c="Tab" class="w" style="flex:1.5">Tab</button><button type="button" data-c="KeyQ">Q</button><button type="button" data-c="KeyW">W</button><button type="button" data-c="KeyE">E</button><button type="button" data-c="KeyR">R</button><button type="button" data-c="KeyT">T</button><button type="button" data-c="KeyY">Y</button><button type="button" data-c="KeyU">U</button><button type="button" data-c="KeyI">I</button><button type="button" data-c="KeyO">O</button><button type="button" data-c="KeyP">P</button><button type="button" data-c="BracketLeft">[</button><button type="button" data-c="BracketRight">]</button><button type="button" data-c="Backslash" style="flex:1.5">\</button></div>
+      <div class="kr"><button type="button" data-c="CapsLock" class="w" style="flex:1.75">Caps</button><button type="button" data-c="KeyA">A</button><button type="button" data-c="KeyS">S</button><button type="button" data-c="KeyD">D</button><button type="button" data-c="KeyF">F</button><button type="button" data-c="KeyG">G</button><button type="button" data-c="KeyH">H</button><button type="button" data-c="KeyJ">J</button><button type="button" data-c="KeyK">K</button><button type="button" data-c="KeyL">L</button><button type="button" data-c="Semicolon">;</button><button type="button" data-c="Quote">'</button><button type="button" data-c="Enter" class="w" style="flex:2.25">Enter</button></div>
+      <div class="kr"><button type="button" data-c="ShiftLeft" class="w" style="flex:2.25">Shift</button><button type="button" data-c="KeyZ">Z</button><button type="button" data-c="KeyX">X</button><button type="button" data-c="KeyC">C</button><button type="button" data-c="KeyV">V</button><button type="button" data-c="KeyB">B</button><button type="button" data-c="KeyN">N</button><button type="button" data-c="KeyM">M</button><button type="button" data-c="Comma">,</button><button type="button" data-c="Period">.</button><button type="button" data-c="Slash">/</button><button type="button" data-c="ShiftRight" class="w" style="flex:2.75">Shift</button></div>
+      <div class="kr"><button type="button" data-c="ControlLeft" class="w" style="flex:1.5">Ctrl</button><button type="button" data-c="MetaLeft" class="w" style="flex:1.5">Win</button><button type="button" data-c="AltLeft" class="w" style="flex:1.5">Alt</button><button type="button" data-c="Space" class="w" style="flex:6.5">Space</button><button type="button" data-c="AltRight" class="w" style="flex:1.5">Alt</button><button type="button" data-c="ControlRight" class="w" style="flex:1.5">Ctrl</button><button type="button" data-c="ArrowLeft">←</button><span class="ud"><button type="button" data-c="ArrowUp">↑</button><button type="button" data-c="ArrowDown">↓</button></span><button type="button" data-c="ArrowRight">→</button></div>
+    </div>
+
+    <div id="ktxt" hidden></div>
+  </div>
+  <div id="main">
+  <header>
+    <h1><span class="rl">T</span>ri<span class="rl">C</span>lick<span class="tcp">+</span></h1>
+    <div class="langmenu">
+      <button id="langbtn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-title="language" title="Language" aria-label="Language">
+        <span class="lc">EN</span><svg class="flag"><use href="#f-en"/></svg>
+      </button>
+      <div id="langlist" role="listbox" hidden>
+        <button class="lang" role="option" data-lang="ar" type="button"><svg class="flag"><use href="#f-ar"/></svg><span class="lc">AR</span><span class="ln">العربية</span></button>
+        <button class="lang on" role="option" data-lang="en" type="button"><svg class="flag"><use href="#f-en"/></svg><span class="lc">EN</span><span class="ln">English</span></button>
+        <button class="lang" role="option" data-lang="es" type="button"><svg class="flag"><use href="#f-es"/></svg><span class="lc">ES</span><span class="ln">Español</span></button>
+        <button class="lang" role="option" data-lang="in" type="button"><svg class="flag"><use href="#f-in"/></svg><span class="lc">IN</span><span class="ln">हिन्दी</span></button>
+        <button class="lang" role="option" data-lang="pt" type="button"><svg class="flag"><use href="#f-pt"/></svg><span class="lc">PT</span><span class="ln">Português</span></button>
+        <button class="lang" role="option" data-lang="ru" type="button"><svg class="flag"><use href="#f-ru"/></svg><span class="lc">RU</span><span class="ln">Русский</span></button>
+        <button class="lang" role="option" data-lang="ur" type="button"><svg class="flag"><use href="#f-ur"/></svg><span class="lc">UR</span><span class="ln">اردو</span></button>
+        <button class="lang" role="option" data-lang="zh" type="button"><svg class="flag"><use href="#f-zh"/></svg><span class="lc">ZH</span><span class="ln">中文</span></button>
+      </div>
+    </div>
+    <button id="theme" type="button"></button>
+  </header>
+
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-page="seq" type="button" role="tab" data-i18n-title="tabSeq" title="Sequence" aria-label="Sequence">
+      <span class="txt" data-i18n="tabSeq">Sequence</span>
+      <span class="ico"><svg class="i"><use href="#cur"/></svg><svg class="i"><use href="#cur"/></svg><svg class="i"><use href="#cur"/></svg></span>
+    </button>
+    <button class="tab" data-page="rapid" type="button" role="tab" data-i18n-title="tabRapid" title="Simultaneous" aria-label="Simultaneous">
+      <span class="txt" data-i18n="tabRapid">Simultaneous</span>
+      <span class="ico"><svg class="i" style="--o:1"><use href="#cur"/></svg><svg class="i" style="--o:.6"><use href="#cur"/></svg><svg class="i" style="--o:.25"><use href="#cur"/></svg></span>
+    </button>
+    <button class="tab" data-page="scroll" type="button" role="tab" data-i18n-title="tabScroll" title="Scroll" aria-label="Scroll">
+      <span class="txt" data-i18n="tabScroll">Scroll</span>
+      <span class="ico"><svg class="i"><use href="#up"/></svg><svg class="i"><use href="#ms"/></svg><svg class="i"><use href="#dn"/></svg></span>
+    </button>
+    <button class="tab" data-page="ocr" type="button" role="tab" data-i18n-title="tabOcr" title="OCR" aria-label="OCR">
+      <span class="txt" data-i18n="tabOcr">OCR</span>
+      <span class="ico"><svg class="i" viewBox="0 0 24 24"><use href="#scanic"/><path class="sl" d="M6.5 12h11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+    </button>
+    <button class="tab" data-page="pattern" type="button" role="tab" data-i18n-title="tabPattern" title="Sketch" aria-label="Sketch">
+      <span class="txt" data-i18n="tabPattern">Sketch</span>
+      <span class="sw" aria-hidden="true"></span>
+      <span class="ico"><svg class="i" viewBox="0 0 24 24"><g class="pen" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 6.2a1.8 1.8 0 0 0-2.4-2.4L5.4 16.2a2 2 0 0 0-.5.8L3.6 21l4-1.3a2 2 0 0 0 .8-.5z"/><path d="m15 6 3 3"/></g><path class="ln" pathLength="1" d="M10 21.4q1.6-2 3.2 0t3.2 0 3.2 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      <span class="beta" aria-hidden="true">beta</span>
+    </button>
+  </div>
+
+  <section id="page-seq" class="page">
+    <div class="stepbar">
+      <div class="stepper">
+        <button id="minus" type="button" data-i18n-title="remove" title="Remove click" aria-label="Remove click">&minus;</button>
+        <button id="plus" type="button" data-i18n-title="addClick" title="Add click" aria-label="Add click">+</button>
+      </div>
+      <div class="tools">
+        <button id="kbbtn" type="button" data-i18n-title="keyboard" title="Keyboard" aria-label="Keyboard" aria-expanded="false"><svg class="i"><use href="#kbic"/></svg></button>
+        <button id="gear" type="button" data-i18n-title="settings" title="Settings" aria-label="Settings"><svg class="i"><use href="#gearic"/></svg></button>
+      </div>
+      <div id="side" hidden>
+        <span data-i18n="holdClick">Hold click</span>
+        <div class="seg">
+          <button id="holdYes" type="button" data-i18n="yes">Yes</button>
+          <button id="holdNo" type="button" data-i18n="no">No</button>
+        </div>
+        <div class="sidef col"><span data-i18n="advanced">Scalping</span>
+          <div class="seg">
+            <button id="advYes" type="button" data-i18n="yes">Yes</button>
+            <button id="advNo" type="button" data-i18n="no">No</button>
+          </div>
+        </div>
+        <div class="sidef" id="rlbox" hidden><span data-i18n="rlLabel">Reload until found</span>
+          <div class="sidenum"><input type="number" id="rlSec" min="1" step="1" placeholder="&ndash;" aria-label="Reload until found, seconds"><small data-i18n="rlSecs">sec</small></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="slots"></div>
+
+    <label class="loop">
+      <input type="checkbox" id="loop">
+      <span data-i18n="repeatSeq">Repeat the sequence</span>
+      <span class="reps" id="reps" hidden></span>
+    </label>
+
+    <div class="actions three">
+      <button id="run" type="button">Start</button>
+      <button id="rtimes" type="button" data-i18n="resetTimes">Reset Times</button>
+      <button id="reset" type="button">Reset Points</button>
+      
+    </div>
+  </section>
+
+  <section id="page-rapid" class="page" hidden>
+    <div class="center">
+      <div class="rate">
+        <input id="rate" type="number" min="1" max="1000" step="any" value="5" aria-label="Number of clicks">
+        <span class="unit" data-i18n="rateUnit">clicks/sec</span>
+      </div>
+      <div class="pt">
+        <span class="dot" id="rdot"></span>
+        <span data-i18n="clickPoint">Click point</span>
+        <button id="rset" type="button">Set</button>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="run2" type="button">Start</button>
+      <button id="reset2" type="button">Reset Point</button>
+    </div>
+  </section>
+
+  <section id="page-scroll" class="page" hidden>
+    <div class="center">
+      <div class="srow">
+        <span class="slab" data-i18n="scrollUp">Scroll up</span>
+        <input id="upS" type="number" min="0" step="1" value="3" aria-label="Seconds to scroll up">
+        <span class="infbox" aria-hidden="true"><svg viewBox="0 0 30 12" width="26" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 1.5L9.5 6 4 10.5M12 1.5L17.5 6 12 10.5M20 1.5L25.5 6 20 10.5"/></svg></span>
+        <span class="unit" data-i18n="sec">s</span>
+        <button id="upI" class="inf" data-for="upS" type="button" aria-pressed="false" data-i18n-title="ariaInf" title="Infinite, no time limit"><svg viewBox="0 0 24 12" width="22" height="9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6C10.4 3.6 8.6 1.6 6.2 1.6 3.8 1.6 2 3.5 2 6s1.8 4.4 4.2 4.4c2.4 0 4.2-2 5.8-4.4zm0 0c1.6 2.4 3.4 4.4 5.8 4.4 2.4 0 4.2-1.9 4.2-4.4s-1.8-4.4-4.2-4.4C15.4 1.6 13.6 3.6 12 6z"/></svg></button>
+      </div>
+      <div class="srow">
+        <span class="slab" data-i18n="scrollDown">Scroll down</span>
+        <input id="downS" type="number" min="0" step="1" value="3" aria-label="Seconds to scroll down">
+        <span class="infbox" aria-hidden="true"><svg viewBox="0 0 30 12" width="26" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 1.5L9.5 6 4 10.5M12 1.5L17.5 6 12 10.5M20 1.5L25.5 6 20 10.5"/></svg></span>
+        <span class="unit" data-i18n="sec">s</span>
+        <button id="downI" class="inf" data-for="downS" type="button" aria-pressed="false" data-i18n-title="ariaInf" title="Infinite, no time limit"><svg viewBox="0 0 24 12" width="22" height="9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6C10.4 3.6 8.6 1.6 6.2 1.6 3.8 1.6 2 3.5 2 6s1.8 4.4 4.2 4.4c2.4 0 4.2-2 5.8-4.4zm0 0c1.6 2.4 3.4 4.4 5.8 4.4 2.4 0 4.2-1.9 4.2-4.4s-1.8-4.4-4.2-4.4C15.4 1.6 13.6 3.6 12 6z"/></svg></button>
+      </div>
+      <div class="seg speedseg" role="group">
+        <button type="button" data-sp="slow" data-i18n="speedSlow">Slow</button>
+        <button type="button" data-sp="normal" data-i18n="speedNormal">Normal</button>
+        <button type="button" data-sp="fast" data-i18n="speedFast">Fast</button>
+      </div>
+      <label class="loop">
+        <input type="checkbox" id="sloop">
+        <span data-i18n="repeat">Repeat</span>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="run3" type="button">Start</button>
+      <button id="reset3" type="button">Reset Times</button>
+    </div>
+  </section>
+
+  <section id="page-ocr" class="page" hidden>
+    <div class="oc">
+      <div class="oc-lang">
+        <div class="oc-f">
+          <div class="oc-lab"><span data-i18n="ocrFrom">From</span></div>
+          <button id="ocfrom" class="oc-sel" type="button" aria-haspopup="listbox" aria-expanded="false"><span class="ov"></span><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <button id="ocswap" class="oc-swap" type="button" data-i18n-title="ocrSwap" title="Swap languages" aria-label="Swap languages"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 5.5h9.5M10 3l2.5 2.5L10 8M13 10.5H3.5M6 8l-2.5 2.5L6 13" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="oc-f">
+          <div class="oc-lab"><span data-i18n="ocrTo">To</span></div>
+          <button id="octo" class="oc-sel" type="button" aria-haspopup="listbox" aria-expanded="false"><span class="ov"></span><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+      <div id="ocmenu" class="oc-menu" hidden>
+        <input id="ocsearch" type="text" autocomplete="off" spellcheck="false" data-i18n-ph="ocrSearch" placeholder="Search languages">
+        <div id="oclist" role="listbox"></div>
+      </div>
+      <button id="ocgo" class="oc-go" type="button"><svg class="i" width="18" height="18"><use href="#findtxt"/></svg><span data-i18n="ocrSelect">Select area to read</span></button>
+      <p id="ocnote" class="oc-note" aria-live="polite"></p>
+      <div id="ocres" hidden>
+        <div class="oc-seg" role="group"><button id="octr" type="button" class="on" data-i18n="ocrTranslation">Translation</button><button id="ocor" type="button" data-i18n="ocrOriginal">Original</button></div>
+        <div class="oc-box"><div id="ocprog" class="oc-prog" hidden><i></i></div><div id="octext" class="oc-text" dir="auto"></div><button id="occopy" class="oc-copy" type="button"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.5 3.5v-.4A1.6 1.6 0 0 0 8.9 1.5H3.6A1.6 1.6 0 0 0 2 3.1v5.3a1.6 1.6 0 0 0 1.6 1.6h.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span data-i18n="ocrCopy">Copy</span></button></div>
+        <div class="oc-meta"><span id="ocpill" class="oc-pill"></span><span id="oclines"></span></div>
+      </div>
+      <button id="ochistbtn" class="oc-hist" type="button" aria-expanded="false" data-i18n="ocrHistory">History</button>
+      <div id="ochist" class="oc-histl" hidden></div>
+    </div>
+  </section>
+
+  <section id="page-pattern" class="page" hidden>
+    <div class="center">
+      <div class="simrow"><span class="srow"><button id="pinf" class="inf" type="button" aria-pressed="false" data-i18n-title="ariaLoop" title="Repeat forever"><svg viewBox="0 0 24 12" width="22" height="9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6C10.4 3.6 8.6 1.6 6.2 1.6 3.8 1.6 2 3.5 2 6s1.8 4.4 4.2 4.4c2.4 0 4.2-2 5.8-4.4zm0 0c1.6 2.4 3.4 4.4 5.8 4.4 2.4 0 4.2-1.9 4.2-4.4s-1.8-4.4-4.2-4.4C15.4 1.6 13.6 3.6 12 6z"/></svg></button></span><button id="psim" type="button"><span class="sico" aria-hidden="true"></span><span data-i18n="simulate">Simulate</span></button><button id="pimg" type="button" data-i18n-title="imgTitle" title="Draw from an image" aria-label="Draw from an image"><svg class="i"><use href="#imgic"/></svg></button></div>
+      <div id="pfind" class="pfind" hidden>
+        <form id="pform" class="fbox" autocomplete="off"><input id="pq" type="text" maxlength="40" spellcheck="false" data-i18n-ph="findPh" placeholder="What do you want to draw?"><button id="pgo" type="submit" data-i18n-title="findGo" title="Search" aria-label="Search"><svg class="i"><use href="#entic"/></svg></button></form>
+        <div id="pres" class="pres"></div>
+        <div class="pline"><p id="pmsg" class="pmsg" aria-live="polite"></p></div>
+        <button id="pup" class="plink" type="button" data-i18n="findUpload">or use your own image</button>
+      </div>
+      <div class="pstatrow"><p id="pstat">Press Simulate, then hold the mouse button and move. Let go to save.</p></div>
+      <div class="prow">
+        <div class="seg speedseg" id="pseg" role="group">
+          <button type="button" data-sp="slow" data-i18n="speedSlow">Slow</button>
+          <button type="button" data-sp="normal" data-i18n="speedNormal">Normal</button>
+          <button type="button" data-sp="fast" data-i18n="speedFast">Fast</button>
+        </div>
+      </div>
+      <div class="pcolrow"><div id="pcolres" class="pcolres"><button id="pcol" type="button" data-i18n-title="colTitle" title="Pick a color from the page" aria-label="Pick a color from the page"><svg class="i"><use href="#dropic"/></svg></button><span id="pcsw" class="pcsw" hidden></span><b id="pchex" data-i18n="colTitle">Pick a color from the page</b><button id="pccopy" type="button" hidden data-i18n-title="ocrCopy" title="Copy" aria-label="Copy"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.5 3.5v-.4A1.6 1.6 0 0 0 8.9 1.5H3.6A1.6 1.6 0 0 0 2 3.1v5.3a1.6 1.6 0 0 0 1.6 1.6h.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button></div><span class="pinfo" tabindex="0" role="note" aria-describedby="pinfotip"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="4.9" r=".9" fill="currentColor"/><path d="M8 7.4v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span id="pinfotip" class="pinfotip" role="tooltip" data-i18n="colInfo">just for curiosity :)</span></span></div>
+    </div>
+
+    <div class="actions">
+      <button id="run4" type="button">Start</button>
+    </div>
+  </section>
+
+  <p id="msg" role="status"></p>
+  <div class="kofi"><span class="free" data-i18n="free">Free and ad-free</span><a id="kofi" href="https://ko-fi.com/triclick" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9.5h11v3.5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9.5zM16 10.5h1.2a2.1 2.1 0 0 1 0 4.2H16M3 20.5h15"/><path d="M7.5 2.2c-1.2 1.3 1.2 2.4 0 3.8M10.5 2.2c-1.2 1.3 1.2 2.4 0 3.8M13.5 2.2c-1.2 1.3 1.2 2.4 0 3.8"/></g></svg><span data-i18n="support">Support me on Ko-fi</span></a></div>
+  </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="vocab.js"></script>
+  <script src="ocrlangs.js"></script>
+  <script src="ocrdata.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
