@@ -3,7 +3,6 @@
 Auto clicker, auto scroller and on-screen text reader (OCR) for Chrome. Free and ad-free.
 
 - Chrome Web Store: https://chromewebstore.google.com/detail/triclick-auto-clicker-scr/cjaihgphajfbnfclcfabngngdpflhlih
-- Support: https://ko-fi.com/triclick
 - Contact: chromedeveloper1@gmail.com (questions, bug reports, anything else)
 
 ## What it does
